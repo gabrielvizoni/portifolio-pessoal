@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+:root{
+    --fundo: #050507;
+    --fundo-2: #0b0b0f;
+
+    --texto: #f3f3f3;
+    --texto-fraco: #9a9a9f;
+
+    --destaque: #5c2a8a;      
+    --destaque-2: #44206a;
+
+    --borda: rgba(255,255,255,0.06);
+    --vidro: rgba(12,12,16,0.8);
+
+    --sombra: 0 15px 40px rgba(0,0,0,0.7);
+    --raio: 16px;
+}
+
+
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #050507 0%, #0a0a0f 100%);
+    color: var(--texto);
+    overflow-x: hidden;
+}
+
+
+
+[id]{
+    scroll-margin-top: 90px;
+}
+
+/*menu*/
+.menu-topo{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: var(--vidro);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--borda);
+}
+
+.lista-menu{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    padding: 1.1rem 1rem;
+}
+
+.link-menu{
+    color: var(--texto);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    opacity: 0.95;
+    position: relative;
+    padding: 0.3rem 0;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.link-menu:hover{
+    color: var(--texto);
+    opacity: 1;
+}
+
+.link-menu::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.35rem;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(90deg, var(--destaque), var(--destaque-2));
+    transition: width 0.25s ease;
+}
+
+.link-menu:hover::after{
+    width: 100%;
+}
+
+/*inicio*/
+.secao-inicio{
+    min-height: 100vh;
+    padding: 7.5rem 1.25rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.9rem;
+}
+
+.foto-perfil{
+    width: 240px;
+    height: 240px;
+    border-radius: 999px;
+    border: 3px solid rgba(109, 60, 82, 0.65);
+    box-shadow: 0 0 0 10px rgba(109, 60, 82, 0.09), var(--sombra);
+    object-fit: cover;
+}
+
+h1{
+    font-size: clamp(2.1rem, 4vw, 3.4rem);
+    color: var(--texto);
+    line-height: 1.1;
+}
+
+.texto-profissao{
+    color: var(--texto-fraco);
+    font-size: 1.1rem;
+}
+
+/*sobre*/ /*descobri q posso utilizar a mesma configuração de classes se eu colocar virgula dessa forma*/
+/*particularmente isso é bem interessante, é bom lembrar*/
+
+.secao-sobre,
+.secao-projetos,
+.secao-contato{
+    padding: 4rem 1.25rem;
+}
+
+.titulo-sobre,
+.titulo-projetos,
+.titulo-contato{
+    max-width: 1100px;
+    margin: 0 auto 1.25rem;
+    font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+    color: var(--texto);
+}
+
+.caixa-sobre{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.6rem;
+    background: rgba(36, 16, 34, 0.55);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+}
+
+.texto-sobre{
+    color: var(--texto);
+    line-height: 1.75;
+    opacity: 0.96;
+}
+
+/*projetos*/
+.grade-projetos{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.4rem;
+}
+
+.caixa-projeto{
+    border-radius: var(--raio);
+    overflow: hidden;
+    background: rgba(36, 16, 34, 0.55);
+    border: 1px solid var(--borda);
+    box-shadow: var(--sombra);
+    transform: translateY(0);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.caixa-projeto:hover{
+    transform: translateY(-6px);
+    border-color: rgba(109, 60, 82, 0.55);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+}
+
+.caixa-projeto a{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.imagem-projeto{
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    filter: saturate(1.02) contrast(1.02);
+}
+
+.caixa-projeto-texto{
+    padding: 1.15rem 1.1rem 1.2rem;
+}
+
+.titulo-projeto{
+    font-size: 1.1rem;
+    margin-bottom: 0.35rem;
+    color: var(--texto);
+}
+
+.descricao-projeto{
+    color: var(--texto-fraco);
+    line-height: 1.35;
+}
+
+/*contatos*/
+.formulario-caixa-maior{
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 1.6rem;
+    background: rgba(36, 16, 34, 0.55);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+}
+
+.formulario-caixa-menor{
+    margin-bottom: 1rem;
+}
+
+.campo-texto{
+    width: 100%;
+    padding: 0.95rem 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(250, 220, 213, 0.12);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--texto);
+    outline: none;
+    font-size: 1rem;
+}
+
+.campo-texto::placeholder{
+    color: rgba(250, 220, 213, 0.55);
+}
+
+.campo-texto:focus{
+    border-color: rgba(109, 60, 82, 0.75);
+    box-shadow: 0 0 0 4px rgba(109, 60, 82, 0.18);
+}
+
+textarea.campo-texto{
+    min-height: 140px;
+    resize: vertical;
+}
+
+.botao-enviar{
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    padding: 0.95rem 1rem;
+    cursor: pointer;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    color: var(--texto);
+    background: linear-gradient(90deg, var(--destaque-2), var(--destaque));
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.botao-enviar:hover{
+    transform: translateY(-2px);
+    filter: brightness(1.06);
+}
+
+.botao-enviar:active{
+    transform: translateY(0);
+}
+/*esse background eu pedi pra IA, achei interessante colocar algo mais animado ao fundo, mas particularmente nao entendi muito bem como funciona*/
+
+.particulas{
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.particulas::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px),
+        linear-gradient(180deg, #050507 0%, #0a0a0f 100%);
+
+    background-size: 240px 240px, cover;
+    background-position: 0 0, center;
+
+    opacity: 0.25;
+
+    animation: fundoMove 60s linear infinite;
+}
+
+@keyframes fundoMove{
+    from{
+        background-position: 0 0, center;
+    }
+    to{
+        background-position: 240px 240px, center;
+    }
+}
+
+
+
+/* mobile -> essa parte eu tive q pedir pro chat gpt me explicar pq eu nao entendi como isso funcionava*/
+@media (max-width: 520px){
+    .lista-menu{
+        gap: 1.1rem;
+        padding: 1rem 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .foto-perfil{
+        width: 190px;
+        height: 190px;
+    }
+}
+

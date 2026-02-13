@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfólio | Gabriel Vizoni</title>
+</head>
+
+<body>
+    <div class="particulas">
+        
+
+    </div>
+    <nav class="menu-topo">
+        <ul class="lista-menu">
+            <li>
+                <a href="#Início" class="link-menu">Início</a>
+            </li>
+            <li>
+                <a href="#Sobre" class="link-menu">Sobre</a>
+            </li>
+            <li>
+                <a href="#Projetos" class="link-menu">Projetos</a>
+            </li>
+            <li>
+                <a href="#Contatos" class="link-menu">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <main id="Início" class="secao-inicio">
+        <img src="./img/Perfil.png" alt="Foto de Gabriel Vizoni" class="foto-perfil">
+        <h1> Gabriel Vizoni </h1>
+        <p class="texto-profissao">Entusiasta de Tecnologia</p>
+    </main>
+
+
+    <section id="Sobre" class="secao-sobre">
+        <h2 class="titulo-sobre">Sobre Mim</h2>
+        <div class="caixa-sobre">
+            <p class="texto-sobre">
+                Olá! Sou Gabriel Vizoni, estudante do 3º semestre de Análise e Desenvolvimento de Sistemas na Unicesumar de Maringá e
+                apaixonado por tecnologia e desenvolvimento de sistemas. Este é o meu portfólio pessoal, desenvolvido
+                integralmente por mim utilizando HTML, CSS e JavaScript. Busco uma oportunidade para iniciar minha 
+                carreira na área de desenvolvimento de software, aplicando meus conhecimentos, aprendendo com profissionais 
+                experientes e contribuindo com soluções criativas e eficientes. Se quiser conversar ou conhecer mais sobre
+                meu meus projetos, entre em contato comigo!
+            </p>
+        </div>
+    </section>
+
+
+    <section id="Projetos" class="secao-projetos">
+        <h2 class="titulo-projetos"> Meus Projetos</h2>
+        <div class="grade-projetos">
+
+            <div class="caixa-projeto">
+                <a href="projeto1.html">
+                    <img src="./img/wallpaper1.png" alt="wallpaper-teste" class="imagem-projeto">
+                    <div class="caixa-projeto-texto">
+                        <h3 class="titulo-projeto">Wallpaper1</h3>
+                        <p class="descricao-projeto">Apenas um wallpaper1</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="caixa-projeto">
+                <a href="projeto2.html">
+                    <img src="./img/wallpaper2.jpg" alt="wallpaper-teste" class="imagem-projeto">
+                    <div class="caixa-projeto-texto">
+                        <h3 class="titulo-projeto">Wallpaper2</h3>
+                        <p class="descricao-projeto">Apenas um wallpaper2</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="caixa-projeto">
+                <a href="projeto3.html">
+                    <img src="./img/wallpaper3.png" alt="wallpaper-teste" class="imagem-projeto">
+                    <div class="caixa-projeto-texto">
+                        <h3 class="titulo-projeto">Wallpaper3</h3>
+                        <p class="descricao-projeto">Apenas um wallpaper3</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="Contatos" class="secao-contato">
+        <h2 class="titulo-contato">Contatos</h2> 
+        <form class="formulario-caixa-maior" id="formulario" onsubmit="enviarWhatsapp(event)">
+  <div class="formulario-caixa-menor">
+    <input placeholder="Nome" class="campo-texto" id="nome">
+  </div>
+
+  <div class="formulario-caixa-menor">
+    <textarea class="campo-texto" placeholder="Digite sua mensagem aqui" id="mensagem"></textarea>
+  </div>
+
+  <button type="submit" class="botao-enviar">Enviar WhatsApp</button>
+</form>
+
+    </section>
+
+    <script>
+        function enviarWhatsapp(event){
+        event.preventDefault();
+
+        const nome = document.getElementById('nome').value.trim();
+        const mensagem = document.getElementById('mensagem').value.trim();
+        const telefone = '5544999304702';
+
+        const texto = `Olá! Me chamo ${nome}. ${mensagem}`;
+        const mensagemFormatada = encodeURIComponent(texto);
+
+        const url = `https://wa.me/${telefone}?text=${mensagemFormatada}`;
+        window.open(url, '_blank');
+  }
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "SN Pro", sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(./img/fundo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.quadradaotop{
+    width: 420px;
+    background-color: transparent;
+    border: 2x solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    color: white;
+    padding: 30px 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    backdrop-filter: blur(8px);
+}
+
+/*LOGIN VIZONI*/
+.quadradaotop h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.caixaescreve{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+
+}
+
+.caixaescreve input::placeholder {
+color: rgba(255, 255, 255, 0.85);
+}
+
+/*caixinha de digitar usuario e senha*/
+.caixaescreve input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    padding: 20px 45px 20px 20px;
+    border-radius: 40px;
+    border: 2px solid;
+}
+
+/*nao mexer, posição do icone de usuario e senha*/
+.caixaescreve i{
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);     
+}
+
+/*lembrar senha*/
+.remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+}
+
+/*cor da caixa selecionada para lembrar senha*/
+.remember-forgot label input{
+    accent-color: white;
+    margin-right: 5px;
+}
+
+/*cor da letra do "esqueci a senha" */
+.remember-forgot a {
+    text-decoration: none;
+    color: white;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline; 
+}
+
+/*botao login*/
+.login{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1); 
+    margin-top: 20px; 
+}
+
+.login:hover{
+    border: 2x solid rgba(255, 255, 255, .2);
+    background-color: transparent;
+    transition: 0.2s;
+}
+
+.linkregistoconta{
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.linkregistoconta a{
+    text-decoration: underline;
+    color: white;
+    font-weight: 500;
+}
+
+.linkregistoconta a :hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
