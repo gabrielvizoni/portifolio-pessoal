@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Development Plan – 2026 | Gabriel Vizoni</title>
+    <link rel="stylesheet" href="plano2026.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Professional Development Plan – 2026</h1>
+            <p class="sub">Gabriel Vizoni</p>
+            <p class="objective">
+                Objective: Structured transition into Full Stack Development while maintaining consistency,
+                collaboration mindset,
+                and continuous improvement.
+            </p>
+        </header>
+
+        <main class="grid">
+            <section class="card">
+                <div class="card-top">
+                    <h2>Q1 – Strengthening Foundations</h2>
+                    <p class="focus">Focus on mastering core web fundamentals and building disciplined study habits.</p>
+                </div>
+
+                <ul class="list">
+                    <li>HTML and CSS with attention to structure and clarity</li>
+                    <li>JavaScript fundamentals and API integration</li>
+                    <li>Version control with Git</li>
+                    <li>Consistent project documentation</li>
+                </ul>
+
+                <p class="commitment">
+                    <span>Commitment:</span> steady daily progress and clean, organized code practices.
+                </p>
+            </section>
+
+            <section class="card">
+                <div class="card-top">
+                    <h2>Q2 – Modern Front-End Development</h2>
+                    <p class="focus">Focus on learning modern frameworks and writing maintainable code.</p>
+                </div>
+
+                <ul class="list">
+                    <li>React fundamentals and component-based architecture</li>
+                    <li>Clear project structure and reusability</li>
+                    <li>Deployment workflows</li>
+                    <li>Communication of technical decisions in English</li>
+                </ul>
+
+                <p class="commitment">
+                    <span>Commitment:</span> writing understandable code and documenting decisions clearly.
+                </p>
+            </section>
+
+            <section class="card">
+                <div class="card-top">
+                    <h2>Q3 – Backend Integration</h2>
+                    <p class="focus">Focus on understanding server-side logic and system communication.</p>
+                </div>
+
+                <ul class="list">
+                    <li>Node.js and REST API development</li>
+                    <li>Database integration</li>
+                    <li>Authentication fundamentals</li>
+                    <li>Full stack integration</li>
+                </ul>
+
+                <p class="commitment">
+                    <span>Commitment:</span> building reliable systems and understanding how different layers interact.
+                </p>
+            </section>
+
+            <section class="card">
+                <div class="card-top">
+                    <h2>Q4 – Professional Readiness</h2>
+                    <p class="focus">Focus on employability, communication, and global collaboration.</p>
+                </div>
+
+                <ul class="list">
+                    <li>Technical interview preparation</li>
+                    <li>Code refactoring and quality improvement</li>
+                    <li>Portfolio refinement</li>
+                    <li>Continuous improvement of English communication</li>
+                </ul>
+
+                <p class="commitment">
+                    <span>Commitment:</span> professionalism, reliability, and growth mindset.
+                </p>
+            </section>
+        </main>
+
+        <section class="contact">
+            <h2>Contact</h2>
+            <p class="contact-sub">
+                If you’d like to talk about opportunities, send me a message. This form will open WhatsApp with a
+                pre-filled text.
+            </p>
+
+            <form class="form" id="formulario" onsubmit="enviarWhatsapp(event)">
+                <div class="field">
+                    <label for="nome">Your name</label>
+                    <input id="nome" name="nome" type="text" placeholder="Name" required />
+                </div>
+
+                <div class="field">
+                    <label for="mensagem">Message</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Type your message..." required></textarea>
+                </div>
+
+                <button class="btn" type="submit">Send via WhatsApp</button>
+                <p class="hint">Opens in a new tab. Your message won’t be sent automatically.</p>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <p>2026 Gabriel Vizoni</p>
+        </footer>
+    </div>
+
+    <script>
+        function enviarWhatsapp(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById("nome").value.trim();
+            const mensagem = document.getElementById("mensagem").value.trim();
+
+            const telefone = "5544999304702";
+
+            const texto = `Hi Gabriel! My name is ${nome}. ${mensagem}`;
+            const mensagemFormatada = encodeURIComponent(texto);
+
+            const url = `https://wa.me/${telefone}?text=${mensagemFormatada}`;
+            window.open(url, "_blank");
+        }
+    </script>
+</body>
+
+</html>
