@@ -1,41 +1,54 @@
-# Portfólio Pessoal | Personal Portfolio  
-Gabriel Vizoni  
-Last update: 13/02/2026  
+# Portfolio Project – Development Update  
+**Gabriel Vizoni**  
+_Last update: 02/13/2026_
 
 ---
 
-## Sobre | About
+## What Was Implemented Today
 
-- Estrutura inicial do meu portfólio pessoal, desenvolvida com foco em front-end utilizando HTML, CSS e JavaScript básico.  
-- Initial structure of my personal portfolio, developed with a front-end focus using HTML, CSS, and basic JavaScript.
-
----
-
-## Estrutura Atual | Current Structure
-
-- Página principal com seções: Início, Sobre, Projetos e Contato.  
-- Main page with sections: Home, About, Projects, and Contact.  
-- Integração com WhatsApp via JavaScript.  
-- WhatsApp integration using JavaScript.  
-- Organização em pastas para escalabilidade, com projeto isolado em `projetos/login`.  
-- Organized folder structure for scalability, with an isolated project inside `projects/login`.
+- Reorganized project folder structure for scalability  
+- Isolated the Login project into its own directory  
+- Fixed relative paths after refactoring  
+- Integrated a **Professional Development Roadmap – 2026** page  
+- Improved bilingual presentation (Portuguese / English)  
+- Enhanced semantic structure and layout consistency  
+- Added structured contact integration via WhatsApp  
 
 ---
 
-## Projeto Implementado | Implemented Project
+## Structural Improvements
 
-- Tela de Login desenvolvida com HTML e CSS (front-end apenas).  
-- Login screen built with HTML and CSS (front-end only).  
-- Autenticação atualmente apenas visual.  
-- Authentication currently visual only.
+- Clear separation between main portfolio and individual projects  
+- Cleaner HTML organization  
+- Improved readability and spacing  
+- Better preparation for future project expansion  
 
 ---
 
-## Próximos Passos | Next Steps
+## Professional Development Integration
 
-- Adicionar novos projetos.  
-- Add new projects.  
-- Implementar back-end.  
-- Implement back-end.  
-- Melhorar responsividade.  
-- Improve responsiveness.
+Added a dedicated **“Professional Development Plan – 2026”** page outlining:
+
+- Quarterly technical growth goals  
+- Front-end to Full Stack transition roadmap  
+- Commitment to consistency and structured learning  
+- Focus on international remote career readiness  
+
+---
+
+## Technical Stack
+
+- HTML5  
+- CSS3  
+- JavaScript  
+- Git  
+- GitHub  
+
+---
+
+## Next Steps
+
+- Strengthen JavaScript fundamentals  
+- Begin React fundamentals  
+- Expand portfolio with real-world style projects  
+- Continue improving technical English communication  
